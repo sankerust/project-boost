@@ -424,7 +424,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f228093eabb47943aa8e536eb384779, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementVector: {x: 0, y: 0, z: 0}
+  movementVector: {x: 10, y: 0, z: 0}
+  movementFactor: 0
 --- !u!1 &259113343
 GameObject:
   m_ObjectHideFlags: 0
@@ -2078,17 +2079,17 @@ PrefabInstance:
     - target: {fileID: 5962567019197603375, guid: 5a320f23c5dca654fa5702d1f40f971c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.96
+      value: -4.65
       objectReference: {fileID: 0}
     - target: {fileID: 5962567019197603375, guid: 5a320f23c5dca654fa5702d1f40f971c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 24
+      value: 20.95
       objectReference: {fileID: 0}
     - target: {fileID: 5962567019197603375, guid: 5a320f23c5dca654fa5702d1f40f971c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.6679726
+      value: -7.63
       objectReference: {fileID: 0}
     - target: {fileID: 5962567019197603375, guid: 5a320f23c5dca654fa5702d1f40f971c,
         type: 3}
@@ -2133,7 +2134,7 @@ PrefabInstance:
     - target: {fileID: 5962567019197603375, guid: 5a320f23c5dca654fa5702d1f40f971c,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 22.86442
+      value: 16.417568
       objectReference: {fileID: 0}
     - target: {fileID: 5962567019197603375, guid: 5a320f23c5dca654fa5702d1f40f971c,
         type: 3}
