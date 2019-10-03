@@ -22,11 +22,14 @@ public class Rocket : MonoBehaviour
   AudioSource audioSource;
   enum State { Alive, Dying, Transcending };
   State state = State.Alive;
+  Boolean collisionsEnabled = true;
+  int currentSceneIndex;
     // Start is called before the first frame update
     void Start()
     {
         rigidBody = GetComponent<Rigidbody>();
         audioSource = GetComponent<AudioSource>();
+        currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
     }
 
     // Update is called once per frame
@@ -36,13 +39,34 @@ public class Rocket : MonoBehaviour
       {
         RespondToThrustInput();
         RespondToRotateInput();
+        // todo only if debug mode is on
+        if (Debug.isDebugBuild)
+        {
+          MonitorDebugKeys();
+        }
       }
 
     }
 
+  private void MonitorDebugKeys()
+  {
+    if (Input.GetKeyDown(KeyCode.L))
+    {
+      LoadNextScene();
+    }
+    else if (Input.GetKeyDown(KeyCode.K))
+    {
+      SceneManager.LoadScene(currentSceneIndex - 1);
+    }
+    else if (Input.GetKeyDown(KeyCode.C))
+    {
+      collisionsEnabled = !collisionsEnabled;
+    }
+  }
+
   void OnCollisionEnter(Collision collision) 
   {
-    if (state != State.Alive) { return; } // ignore collisions if dead
+    if (state != State.Alive || !collisionsEnabled) { return; } // ignore collisions if dead
     switch (collision.gameObject.tag)
     {
       case "Friendly" :
@@ -75,12 +99,12 @@ public class Rocket : MonoBehaviour
 
   private void ReloadScene()
   {
-    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    SceneManager.LoadScene(currentSceneIndex);
   }
 
   private void LoadNextScene()
   {
-    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    SceneManager.LoadScene(currentSceneIndex + 1);
   }
 
   private void RespondToThrustInput()
