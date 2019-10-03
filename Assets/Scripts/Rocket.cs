@@ -104,7 +104,12 @@ public class Rocket : MonoBehaviour
 
   private void LoadNextScene()
   {
-    SceneManager.LoadScene(currentSceneIndex + 1);
+    if (currentSceneIndex == SceneManager.sceneCountInBuildSettings - 1) {
+      SceneManager.LoadScene(0);
+    } else {
+      SceneManager.LoadScene(currentSceneIndex + 1);
+    }
+    
   }
 
   private void RespondToThrustInput()

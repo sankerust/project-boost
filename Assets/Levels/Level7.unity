@@ -1199,7 +1199,7 @@ PrefabInstance:
     - target: {fileID: 5716835472241873873, guid: 45e4c753d8ca16c4abf4ded56d906fa7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -227.5
+      value: -224.1
       objectReference: {fileID: 0}
     - target: {fileID: 5716835472241873873, guid: 45e4c753d8ca16c4abf4ded56d906fa7,
         type: 3}
@@ -1209,7 +1209,7 @@ PrefabInstance:
     - target: {fileID: 5716835472241873873, guid: 45e4c753d8ca16c4abf4ded56d906fa7,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -41
+      value: -86.6
       objectReference: {fileID: 0}
     - target: {fileID: 5716835472241873873, guid: 45e4c753d8ca16c4abf4ded56d906fa7,
         type: 3}
@@ -1250,6 +1250,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5716835472241873878, guid: 45e4c753d8ca16c4abf4ded56d906fa7,
+        type: 3}
+      propertyPath: field of view
+      value: 23
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45e4c753d8ca16c4abf4ded56d906fa7, type: 3}
@@ -2002,6 +2007,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.x
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 220517989, guid: 410118155ad230c4b9da88e5756310aa, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 260121104, guid: 410118155ad230c4b9da88e5756310aa, type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5288746851586245593, guid: 410118155ad230c4b9da88e5756310aa,
         type: 3}
       propertyPath: CollisionModule.enabled
@@ -2017,10 +2030,6 @@ PrefabInstance:
       propertyPath: ColorBySpeedModule.enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 220517989, guid: 410118155ad230c4b9da88e5756310aa, type: 3}
-      propertyPath: m_RootOrder
-      value: 9
-      objectReference: {fileID: 0}
     - target: {fileID: 220517990, guid: 410118155ad230c4b9da88e5756310aa, type: 3}
       propertyPath: m_Intensity
       value: 7.09
@@ -2028,10 +2037,6 @@ PrefabInstance:
     - target: {fileID: 220517990, guid: 410118155ad230c4b9da88e5756310aa, type: 3}
       propertyPath: m_Range
       value: 21.18
-      objectReference: {fileID: 0}
-    - target: {fileID: 260121104, guid: 410118155ad230c4b9da88e5756310aa, type: 3}
-      propertyPath: m_RootOrder
-      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 410118155ad230c4b9da88e5756310aa, type: 3}
